@@ -3,31 +3,32 @@ module ctrl_unit (
     // top input
     input clk,
     input rst_n,
-    input traffic_jam_0;
-    input traffic_jam_1;
-    input traffic_jam_2;
-    input traffic_jam_3;
+    input jam_sensor_0,
+    input jam_sensor_1
+    input jam_sensor_2,
+    input jam_sensor_3,
+
     // top output
-    output reg allow_0; 
-    output reg allow_1; 
-    output reg allow_2; 
-    output reg allow_3; 
+    output reg allow_0, 
+    output reg allow_1,
+    output reg allow_2, 
+    output reg allow_3, 
  
     //ctrl input
-    input allow_0_norm;
-    input allow_1_norm;
-    input allow_2_norm;
-    input allow_3_norm;
-    input allow_0_jam;
-    input allow_1_jam;
-    input allow_2_jam;
-    input allow_3_jam;
+    input allow_0_norm,
+    input allow_1_norm,
+    input allow_2_norm,
+    input allow_3_norm,
+    input allow_0_jam,
+    input allow_1_jam,
+    input allow_2_jam,
+    input allow_3_jam,
 
     //ctrl output
-    output reg norm_op_en;
-    output reg jam_op_en;
-    output reg norm_counter_en;
-    output reg jam_counter_en;
+    output reg norm_op_en,
+    output reg jam_op_en,
+    output reg norm_counter_en,
+    output reg jam_counter_en
 );
 
     reg [1:0] current_state;
@@ -38,7 +39,7 @@ module ctrl_unit (
     parameter JAM = 2;
 
     wire there_is_a_jam;
-    assign there_is_a_jam = traffic_jam_0 | traffic_jam_1 | traffic_jam_2 | traffic_jam_3;
+    assign there_is_a_jam = jam_sensor_0 | jam_sensor_1 | jam_sensor_2 | jam_sensor_3;
 
 
     // state transition
