@@ -13,7 +13,7 @@ module norm_counter (
             traffic_light <= 2'b0;
         end
         else if (norm_counter_en) begin
-            if (norm_counter == 30) begin           // each lane will have 30 sec 
+            if (norm_counter == 29) begin           // each lane will have 30 sec 
                 traffic_light <= traffic_light + 1;
                 norm_counter <= 0;
             end
