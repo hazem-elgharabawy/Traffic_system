@@ -3,7 +3,7 @@ module jam_counter (
     input rst_n,
     input jam_counter_en,
     output reg jam_start,
-    output reg jam_rotation,
+    output reg jam_rotation
     
 );
     
@@ -22,6 +22,7 @@ module jam_counter (
             jam_counter <= 0;
             jam_start <= 0;
             jam_rotation <= 0;
+        end
         else begin
             if (!start) begin
                 jam_start <= 1;
@@ -39,6 +40,5 @@ module jam_counter (
             end
         end 
         end
-    end
     
 endmodule

@@ -1,14 +1,14 @@
 module traffic_system_top (
     input clk,
     input rst_n,
-    input jam_sensor_0;
-    input jam_sensor_1;
-    input jam_sensor_2;
-    input jam_sensor_3;
-    output reg allow_0;
-    output reg allow_1;
-    output reg allow_2;
-    output reg allow_3;
+    input jam_sensor_0,
+    input jam_sensor_1,
+    input jam_sensor_2,
+    input jam_sensor_3,
+    output reg allow_0,
+    output reg allow_1,
+    output reg allow_2,
+    output reg allow_3
 );
     
     wire allow_0_norm, allow_1_norm, allow_2_norm, allow_3_norm;
@@ -29,7 +29,7 @@ module traffic_system_top (
         .allow_0(allow_0),
         .allow_1(allow_1),
         .allow_2(allow_2),
-        .allow_3(allow_3)
+        .allow_3(allow_3),
         
         .allow_0_norm(allow_0_norm),
         .allow_1_norm(allow_1_norm),

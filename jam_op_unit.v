@@ -2,10 +2,10 @@ module jam_op_unit (
     input clk,
     input rst_n,
     
-    input jam_sensor_0;
-    input jam_sensor_1;
-    input jam_sensor_2;
-    input jam_sensor_3;
+    input jam_sensor_0,
+    input jam_sensor_1,
+    input jam_sensor_2,
+    input jam_sensor_3,
     
     input jam_op_en,
     input jam_rotation,

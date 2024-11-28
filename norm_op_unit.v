@@ -3,7 +3,7 @@ module norm_op_unit (
     output reg  allow_0_norm,
     output reg  allow_1_norm,
     output reg  allow_2_norm,
-    output reg  allow_3_norm,
+    output reg  allow_3_norm
 );
     
     always @(*) begin
