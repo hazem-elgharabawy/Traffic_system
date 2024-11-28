@@ -1,4 +1,4 @@
-module jam_opp_unit (
+module jam_op_unit (
     input clk,
     input rst_n,
     
@@ -7,7 +7,7 @@ module jam_opp_unit (
     input traffic_jam_2;
     input traffic_jam_3;
     
-    input jam_opp_en,
+    input jam_op_en,
     input jam_rotation,
     input jam_start,
     
@@ -26,7 +26,7 @@ module jam_opp_unit (
             allow_3_jam = 0;
             current_lane = 2'b00;
         end
-        else if (!jam_opp_en) begin
+        else if (!jam_op_en) begin
             allow_0_jam = 0;
             allow_1_jam = 0;
             allow_2_jam = 0;

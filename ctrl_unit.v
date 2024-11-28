@@ -24,8 +24,8 @@ module ctrl_unit (
     input allow_3_jam;
 
     //ctrl output
-    output reg norm_opp_en;
-    output reg jam_opp_en;
+    output reg norm_op_en;
+    output reg jam_op_en;
     output reg norm_counter_en;
     output reg jam_counter_en;
 );
@@ -92,8 +92,8 @@ module ctrl_unit (
                 allow_1 = 0;
                 allow_2 = 0;
                 allow_3 = 0;
-                norm_opp_en = 0;
-                jam_opp_en = 0;
+                norm_op_en = 0;
+                jam_op_en = 0;
                 norm_counter_en = 0;
                 jam_counter_en = 0;
             end 
@@ -102,8 +102,8 @@ module ctrl_unit (
                 allow_1 = allow_1_norm;
                 allow_2 = allow_2_norm;
                 allow_3 = allow_3_norm;
-                norm_opp_en = 1;
-                jam_opp_en = 0;
+                norm_op_en = 1;
+                jam_op_en = 0;
                 norm_counter_en = 1;
                 jam_counter_en = 0;
             end
@@ -112,8 +112,8 @@ module ctrl_unit (
                 allow_1 = allow_1_jam;
                 allow_2 = allow_2_jam;
                 allow_3 = allow_3_jam;
-                norm_opp_en = 0;
-                jam_opp_en = 1;
+                norm_op_en = 0;
+                jam_op_en = 1;
                 norm_counter_en = 0;
                 jam_counter_en = 1;
             end
@@ -122,8 +122,8 @@ module ctrl_unit (
                 allow_1 = 0;
                 allow_2 = 0;
                 allow_3 = 0;
-                norm_opp_en = 0;
-                jam_opp_en = 0;
+                norm_op_en = 0;
+                jam_op_en = 0;
                 norm_counter_en = 0;
                 jam_counter_en = 0;
             end 

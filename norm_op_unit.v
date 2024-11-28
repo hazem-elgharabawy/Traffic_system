@@ -1,4 +1,4 @@
-module norm_opp_unit (
+module norm_op_unit (
     input [1:0] traffic_light,
     output reg  allow_0_norm,
     output reg  allow_1_norm,
