@@ -35,7 +35,14 @@ module traffic_system_tb ();
         init();
         check_reset;
         // check normal operation
-        repeat (100) @(posedge clk);
+        //repeat (80) @(negedge clk);
+        //jam_sensor_0 = 1;
+        //repeat (40) @(negedge clk);
+        //jam_sensor_0 = 0;
+        repeat (100) @(negedge clk);
+        jam_sensor_1 = 1;
+        jam_sensor_2 = 1;
+        repeat (100) @(negedge clk);
         $stop;
     end
 
